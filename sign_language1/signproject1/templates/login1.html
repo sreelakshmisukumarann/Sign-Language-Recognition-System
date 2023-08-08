@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head></head>
+<body style="background-image: url('https://cdn.stocksnap.io/img-thumbs/960w/colorful-bokeh_2END49TZPS.jpg');">
+ <form action="/log/" method="POST">
+    {% csrf_token %}
+<table border='0' width='480px' cellpadding='0' cellspacing='0' align='center'>
+<center><tr>
+   <td><h1><center>Login Form</center></h1></td>
+</tr><center>
+ 
+<table border='0' width='480px' cellpadding='0' cellspacing='0' align='center'>
+<tr> <td>&nbsp;</td> </tr>
+<tr>
+    <td align='center'>EMAIL:</td>
+    <td><input type='email' name='email1' id='email1' required></td>
+</tr>
+<tr> <td>&nbsp;</td> </tr>
+<tr>
+    <td align='center'>PASSWORD:</td>
+    <td><input type='password' name='pass1' id='pass1' required></td>
+</tr>
+
+
+<tr> <td>&nbsp;</td> </tr>
+<tr> <td>&nbsp;</td> </tr>
+<tr> <td>&nbsp;</td> </tr>
+<table border='0' cellpadding='0' cellspacing='0' width='480px' align='center'>
+<tr>
+    <td align='center'><input type='submit' name='REGISTER' value="Login"></td>
+</tr>
+</table>
+</table>
+ 
+</table>
+</form>
+</body>
+</html>

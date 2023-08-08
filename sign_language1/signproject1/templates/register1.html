@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function checkpassword(form){
+            pass1=form.pass1.value;
+            pass2=form.pass2.value;
+            
+            if(pass1!=pass2)
+            {
+                alert("password did not match");
+                return false;
+            }
+            else{
+                alert("password match");
+                return true;
+            }
+        }
+    </script>
+</head>
+<body style="background-image: url('https://cdn.stocksnap.io/img-thumbs/960w/colorful-bokeh_2END49TZPS.jpg');">
+ <form action="" method="POST" onsubmit="return checkpassword(this)">
+    {% csrf_token %}
+<table border='0' width='480px' cellpadding='0' cellspacing='0' align='center'>
+<center><tr>
+   <td><h1><center>Registration Form</center></h1></td>
+</tr><center>
+ 
+<table border='0' width='480px' cellpadding='0' cellspacing='0' align='center'>
+<tr>
+    <td align='center'>NAME:</td>
+    <td><input type='text' name='name1' id='name1' required></td>
+</tr>
+<tr> <td>&nbsp;</td> </tr>
+<tr>
+    <td align='center'>ADDRESS:</td>
+    <td><input type='textarea' name='addr' id='addr' required></td>
+</tr>
+<tr> <td>&nbsp;</td> </tr>
+<tr>
+    <td align='center'>DOB:</td>
+    <td><input type='date' name='dob' id='dob' required></td>
+</tr>
+<tr> <td>&nbsp;</td> </tr>
+<tr>
+    <td align='center'>AGE:</td>
+    <td><input type='number' name='age' id='age' required></td>
+</tr>
+<tr> <td>&nbsp;</td> </tr>
+<tr>
+    <td align='center'>PHONE:</td>
+    <td><input type='number' name='phone1' id='phone1' required></td>
+</tr>
+<tr> <td>&nbsp;</td> </tr>
+<tr>
+    <td align='center'>EMAIL:</td>
+    <td><input type='email' name='email1' id='email1' required></td>
+</tr>
+<tr> <td>&nbsp;</td> </tr>
+<tr>
+    <td align='center'>PASSWORD:</td>
+    <td><input type='password' name='pass1' id='pass1' required></td>
+</tr>
+
+
+<tr> <td>&nbsp;</td> </tr>
+<tr>
+    <td align='center'>CONFIRM PASSWORD:</td>
+    <td><input type='PASSWORD' name='pass2' id='pass2' required></td>
+</tr>
+<tr> <td>&nbsp;</td> </tr>
+<tr> <td>&nbsp;</td> </tr>
+<table border='0' cellpadding='0' cellspacing='0' width='480px' align='center'>
+<tr>
+    <td align='center'><input type='submit' name='REGISTER' value="register"></td>
+</tr>
+</table>
+</table>
+ 
+</table>
+</form>
+</body>
+</html>
